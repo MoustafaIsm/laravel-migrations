@@ -1,0 +1,17 @@
+-- Question --
+
+Lets assume a person called Bob is trying to book a court on our app, he selected the court, selected date and time, he reached checkout page and started filling his credit card details. Meanwhile another guy called Peter, who is faster than Bob, booked the same court/slot and filled in his credit card quickly and paid.
+In your opinion, who should book this slot?
+if Bob should reserve the slot, technically, what should the system do?
+
+-- Answer --
+
+There are two ways to handle this situation:
+
+First: We can use a lock on the court, so that no one else can book it while Bob is filling his credit card details. This is the simplest solution, but it has a drawback: if Bob takes too long to fill his credit card details, he may lose his booking and no one else could book the same slot so technically we lose a slot that could have been booked by someone else (Peter).
+
+Second: We can let both Bob and Peter to book the court, and letting them fill their credit card details. If Bob is faster than Peter, he will be able to book the court. If Peter is faster than Bob, he will be able to book the court. This is the most complex solution, but it has the advantage of not losing any slot.
+
+-- Conclusion --
+
+In my opinion, the second solution is the best one, but it is also the most complex one. So, it depends on the complexity of the system and the time you have to implement it.
